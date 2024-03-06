@@ -1,0 +1,30 @@
+/*setting up the variables, colors, fonts*/
+:root {
+  /* COLORS */
+  --clr-primary: #6962ff;
+  --clr-bg-grayblue: #1b2239;
+  --clr-bg-darkblue: #13192f;
+  --clr-bg-lightblue: #27325e;
+  /* #27325e :this color also used in the last section for the button-text "Create my bucket list"*/
+  --clr-text-primary: #fff;
+  --clr-text-feature-blue: var(--clr-primary);
+  --clr-text-feature-green: #00be90;
+  --clr-text-feature-purple: #7c57f5;
+  --clr-text-feature-red: #ed5b7b;
+
+  /* FONTS */
+  /* font family */
+  --ff-primary: "Inter", sans-serif;
+  /* font weights */
+  --fw-light: 400;
+  --fw-special: 500;
+  --fw-buttons: 600;
+  --fw-headings: 700;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-primary);
+}
