@@ -1,0 +1,163 @@
+/*setting up the variables, colors, fonts*/
+:root {
+  /* COLORS */
+  --clr-primary: #6962ff;
+  --clr-bg-grayblue: #1b2239;
+  --clr-bg-darkblue: #13192f;
+  --clr-bg-lightblue: #27325e;
+  /* #27325e :this color also used in the last section for the button-text "Create my bucket list"*/
+  --clr-text-primary: #fff;
+  --clr-text-feature-blue: var(--clr-primary);
+  --clr-text-feature-green: #00be90;
+  --clr-text-feature-purple: #7c57f5;
+  --clr-text-feature-red: #ed5b7b;
+
+  /* FONTS */
+  /* font family */
+  --ff-primary: "Inter", sans-serif;
+  /* font weights */
+  --fw-light: 400;
+  --fw-special: 500;
+  --fw-buttons: 600;
+  --fw-headings: 700;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--clr-bg-darkblue);
+}
+
+header {
+  background-color: var(--clr-bg-grayblue);
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 70rem;
+  padding: 1rem 1.5rem;
+  margin-inline: auto;
+  align-items: center;
+  position: relative;
+}
+
+header .navbar .navbar__links {
+  display: flex;
+  list-style: none;
+}
+.navbar .navbar__links a {
+  margin-inline: 1.1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: var(--fw-light);
+  font-size: 0.9rem;
+}
+
+header .navbar .navbar__btn-download {
+  background-color: var(--clr-primary);
+  color: white;
+  padding: 10px;
+  border-radius: 999px;
+  border: solid 2px #0d6efd;
+  font-weight: var(--fw-feature);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+header .navbar .navbar__btn-download:hover {
+  background-color: #7a73fd;
+  border-color: var(--clr-primary);
+}
+
+header .navbar .navbar__menu {
+  width: 3rem;
+  height: 3rem;
+  background-color: #13192f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  display: none;
+  position: relative;
+}
+
+header .navbar .navbar__menu img {
+  display: none;
+  width: 50%;
+  transition: 0.3s;
+  transform: rotate(180deg);
+}
+
+header .navbar .navbar__dropdown-menu--small-screen {
+  position: absolute;
+  top: 4rem;
+  right: -1.5rem;
+  background-color: #202944;
+  list-style: none;
+  transition: 0.3s;
+}
+
+.navbar .navbar__dropdown-menu--small-screen li {
+  transition: 0.3s;
+}
+
+.navbar .navbar__dropdown-menu--small-screen a {
+  display: block;
+  padding: 1.3rem;
+  padding-right: 9rem;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .navbar__dropdown-menu--small-screen li:hover {
+  background-color: #2a3658;
+}
+
+.navbar__dropdown-menu--small-screen::before {
+  position: absolute;
+  content: "";
+  top: -2rem;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  background-color: transparent;
+}
+
+.navbar .navbar__dropdown-menu--small-screen a:not(:nth-child(4)) {
+  border-bottom: solid 1px var(--clr-bg-lightblue);
+}
+
+header .navbar .navbar__menu:hover img {
+  transform: rotate(90deg);
+}
+
+header .navbar .navbar__menu:hover .navbar__dropdown-menu--small-screen {
+  /*here for dropping down the menu*/
+  display: block;
+}
+
+header .navbar .navbar__dropdown-menu--small-screen:hover {
+  /*here for keep hovering over the menu and not lose it*/
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  header .navbar .navbar__links {
+    display: none;
+  }
+  header .navbar .navbar__menu,
+  header .navbar .navbar__menu img {
+    display: flex;
+  }
+  header .navbar .navbar__menu img {
+    width: 35%;
+  }
+  header .navbar .navbar__dropdown-menu--small-screen {
+    display: none;
+  }
+}

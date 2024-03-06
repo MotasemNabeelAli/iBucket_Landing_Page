@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iBucket</title>
-    <!-- linking the main styling file -->
-    <link rel="stylesheet" href="Styles/style.css" />
     <!-- linking the normalize css file to render the element normally -->
     <link rel="stylesheet" href="Styles/normalize.css" />
+    <!-- linking the main styling file -->
+    <link rel="stylesheet" href="Styles/style.css" />
     <!-- Google "Inter" font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,5 +16,33 @@
       rel="stylesheet"
     />
   </head>
-  <body></body>
+  <body>
+    <!-- header start -->
+    <header>
+      <nav class="navbar">
+        <img
+          class="navbar__logo"
+          src="images/svg/logo-light.svg.svg"
+          alt="logo of the website"
+        />
+        <menu class="navbar__links">
+          <li><a href="#">Updates</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Help</a></li>
+        </menu>
+        <button class="navbar__btn-download">Download</button>
+        <div class="navbar__menu">
+          <img src="images/menu-arrow.png" alt="drop down menu arrow" />
+          <menu class="navbar__dropdown-menu--small-screen">
+            <li><a href="#">Updates</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Help</a></li>
+          </menu>
+        </div>
+      </nav>
+    </header>
+    <!-- header end -->
+  </body>
 </html>
