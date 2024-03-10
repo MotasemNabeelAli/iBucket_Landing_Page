@@ -283,3 +283,62 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   font-size: 13px;
 }
 /* landing section styling end */
+/* accomplishments section styling start*/
+.global-container {
+  max-width: 50rem;
+  margin-inline: auto;
+  margin-top: 5rem;
+  text-align: center;
+  color: white;
+}
+.intro-information {
+  padding: 0 3rem;
+}
+.info-text {
+  margin: 1.5rem 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.trip-planing .pictures-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.trip-planing .pictures-container img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.trip-planing .pictures-container img:nth-child(3) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+@media screen and (max-width: 600px) {
+  .trip-planing .pictures-container img:nth-child(1) {
+    display: none;
+  }
+  .trip-planing .pictures-container img:nth-child(4) {
+    display: none;
+  }
+  .trip-planing .pictures-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trip-planing .pictures-container img:nth-child(3) {
+    order: 3;
+  }
+  .global-container {
+    width: 92%;
+  }
+  .trip-planing .pictures-container {
+    margin-inline: auto;
+  }
+}
+/* accomplishments section styling end*/
