@@ -160,8 +160,8 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
     display: none;
   }
 }
-/* header styling end */
-/* landing section styling start */
+/* header styling END */
+/* landing section styling START */
 .landing-section {
   /* min-height: 100vh; */
   position: relative;
@@ -282,8 +282,8 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   opacity: 80%;
   font-size: 13px;
 }
-/* landing section styling end */
-/* accomplishments section styling start*/
+/* landing section styling END */
+/* accomplishments section styling START*/
 .global-container {
   max-width: 50rem;
   margin-inline: auto;
@@ -315,9 +315,9 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
-.trip-planing .pictures-container img {
+.pictures-container img {
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
 }
 .trip-planing .pictures-container img:nth-child(3) {
   grid-column: span 2;
@@ -340,8 +340,37 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   .global-container {
     width: 92%;
   }
-  .trip-planing .pictures-container {
+  .pictures-container {
     margin-inline: auto;
   }
 }
-/* accomplishments section styling end*/
+/* accomplishments section styling END*/
+/* visited places section styling START */
+.visited-places .features .feature {
+  color: var(--clr-text-feature-green);
+}
+.visited-places .pictures-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.visited-places .pictures-container img:first-child {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+@media screen and (max-width: 600px) {
+  .visited-places .pictures-container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+  .visited-places .pictures-container img:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .visited-places .pictures-container img:not(:first-child) {
+    height: 12rem;
+  }
+}
+
+/* visited places section styling END */
