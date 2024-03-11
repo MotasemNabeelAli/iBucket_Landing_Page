@@ -307,6 +307,9 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   flex-wrap: wrap;
   gap: 1rem;
 }
+.trip-planing .features .feature {
+  color: var(--clr-primary);
+}
 .trip-planing .pictures-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
