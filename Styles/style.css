@@ -423,3 +423,39 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   }
 }
 /* next trip section styling END */
+/* collaboration section styling START */
+.friends-collaboration .global-container {
+  margin-top: 0;
+}
+.friends-collaboration .features .feature {
+  color: var(--clr-text-feature-red);
+}
+.friends-collaboration .pictures-container img {
+  width: 100%;
+}
+.friends-collaboration .pictures-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .friends-collaboration .global-container {
+    margin-top: 7rem;
+  }
+  .friends-collaboration .pictures-container {
+    grid-template-columns: 1fr;
+  }
+  .friends-collaboration .pictures-container div {
+    height: 25.5rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1.5rem;
+  }
+  .friends-collaboration .pictures-container img {
+    position: absolute;
+    top: -3.7rem;
+    left: 0;
+  }
+}
+/* collaboration section styling END */
