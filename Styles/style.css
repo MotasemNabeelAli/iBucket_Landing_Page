@@ -459,3 +459,39 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   }
 }
 /* collaboration section styling END */
+/* bucket-list section styling START */
+.application .application__reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  row-gap: 3rem;
+  background-color: #fef4e7;
+  color: #1e1e1e;
+  padding: 3rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.application .application__reviews .application__review {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.application .application__download {
+  /* padding: 0 3rem 3rem 3rem; */
+}
+.application .application__download img {
+  width: 100%;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+.application .application__review__starts-rate {
+  display: flex;
+  justify-content: center;
+}
+.application .application__review__description {
+  font-size: 12px;
+  font-weight: 400;
+}
+.application .application__review__store {
+  font-size: 10px;
+  font-weight: 600;
+}
+/* bucket-list section styling END */
