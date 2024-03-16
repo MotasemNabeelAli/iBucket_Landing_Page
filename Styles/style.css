@@ -494,4 +494,65 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   font-size: 10px;
   font-weight: 600;
 }
+
+.application .application__download {
+  position: relative;
+  height: 17.24rem;
+}
+
+.application .application__download img {
+  position: absolute;
+  left: 0;
+}
+
+.application .application__download__info {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  max-width: 27rem;
+  text-align: start;
+  padding: 2rem;
+}
+
+.application .application__download__header {
+  font-size: 33px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.application .application__download__description {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.application .application__download__btn {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 99px;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bucket-list .global-container {
+  padding-bottom: 7rem;
+}
+
+@media screen and (max-width: 600px) {
+  .application .application__reviews {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+  }
+  .application .application__download img {
+    width: max-content;
+  }
+  .application .application__download {
+    overflow: hidden;
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+  .application .application__download__header {
+    font-size: 24px;
+  }
+}
 /* bucket-list section styling END */
