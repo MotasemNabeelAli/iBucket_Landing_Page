@@ -285,11 +285,12 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
 /* landing section styling END */
 /* accomplishments section styling START*/
 .global-container {
-  max-width: 50rem;
+  max-width: 55rem;
   margin-inline: auto;
   margin-top: 7rem;
   text-align: center;
   color: white;
+  padding: 0 1rem;
 }
 .intro-information {
   padding: 0 3rem;
@@ -390,16 +391,14 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   overflow: hidden;
   grid-column: span 2;
   position: relative;
+  height: 16rem;
+  border-radius: 1.5rem;
 }
 .next-trip .pictures-container .right-side > img {
   height: 9rem;
 }
-.next-trip .pictures-container .right-side div {
-  height: 58.3%;
-  border-radius: 1.5rem;
-}
 .next-trip .pictures-container .right-side div img {
-  position: inherit;
+  position: relative;
   top: -5rem;
 }
 
@@ -424,9 +423,6 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
 }
 /* next trip section styling END */
 /* collaboration section styling START */
-.friends-collaboration .global-container {
-  margin-top: 0;
-}
 .friends-collaboration .features .feature {
   color: var(--clr-text-feature-red);
 }
@@ -502,7 +498,8 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
 .application .application__download img {
   position: absolute;
   left: 0;
-  width: 108%;
+  height: 100%;
+  width: 55rem;
 }
 
 .application .application__download__info {
@@ -556,3 +553,62 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   }
 }
 /* bucket-list section styling END */
+/* footer section styling START */
+.footer {
+  background-color: var(--clr-bg-lightblue);
+  padding: 3rem 0;
+}
+.footer .global-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+  margin-top: 0;
+}
+.footer .footer__info--left {
+  text-align: start;
+}
+.footer .footer__info--right {
+  display: flex;
+  gap: 5rem;
+  text-align: start;
+}
+.footer .footer__info--right ul {
+  list-style: none;
+}
+.footer .footer__info--right li {
+  font-size: 13px;
+  padding-top: 0.5rem;
+}
+.footer .footer__info--right h5 {
+  font-size: 15px;
+  font-weight: 700;
+}
+.footer__info--left .footer__info__text {
+  font-size: 13px;
+  font-weight: 400;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+.footer__info--left .footer__info__copy-right {
+  font-size: 13px;
+  font-weight: 400;
+  color: hsl(0, 0%, 60%);
+}
+.footer__info--right .footer__info__languages li {
+  display: flex;
+  justify-content: start;
+  gap: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer .global-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer .footer__info--right {
+    flex-wrap: wrap;
+    column-gap: 8rem;
+    row-gap: 2rem;
+  }
+}
+/* footer section styling END */
