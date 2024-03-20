@@ -511,7 +511,7 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
     grid-template-columns: 1fr;
   }
   .friends-collaboration .pictures-container div {
-    height: 25.5rem;
+    height: 19.5rem;
     overflow: hidden;
     position: relative;
     border-radius: 1.5rem;
