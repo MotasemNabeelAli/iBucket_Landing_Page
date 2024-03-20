@@ -527,7 +527,7 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
 .application .application__reviews {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 1rem;
+  column-gap: 5rem;
   row-gap: 3rem;
   background-color: #fef4e7;
   color: #1e1e1e;
@@ -547,6 +547,20 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   display: flex;
   justify-content: center;
 }
+.application .application__review:first-child svg:nth-child(1) path,
+.application .application__review:first-child svg:nth-child(2) path,
+.application .application__review:first-child svg:nth-child(3) path,
+.application .application__review:nth-child(2) svg:not(:nth-child(5)) path,
+.application .application__review:nth-child(3) svg path,
+.application .application__review:nth-child(4) svg:nth-child(1) path,
+.application .application__review:nth-child(4) svg:nth-child(2) path,
+.application .application__review:nth-child(5) svg path,
+.application .application__review:nth-child(6) svg:nth-child(1) path,
+.application .application__review:nth-child(6) svg:nth-child(2) path,
+.application .application__review:nth-child(6) svg:nth-child(3) path {
+  fill: #f7930d;
+}
+
 .application .application__review__description {
   font-size: 12px;
   font-weight: 400;
@@ -607,7 +621,8 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
 @media screen and (max-width: 600px) {
   .application .application__reviews {
     grid-template-columns: 1fr 1fr;
-    column-gap: 5rem;
+    column-gap: 2rem;
+    row-gap: 1.5rem;
   }
   .application .application__download img {
     width: max-content;
