@@ -371,16 +371,20 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   .trip-planing .pictures-container div:nth-child(3) {
     grid-column: span 1;
   }
-  .pictures-container__second div:first-child,
-  .pictures-container__second div:last-child {
-    height: 70%;
+  .trip-planing .pictures-container__second div:first-child,
+  .trip-planing .pictures-container__second div:last-child {
+    height: 85%;
     width: 50%;
   }
-  .pictures-container > div:last-child {
+  .trip-planing .pictures-container__first div:first-child img,
+  .trip-planing .pictures-container__second div:last-child img {
+    width: 100%;
+  }
+  .trip-planing .pictures-container > div:last-child {
     position: relative;
     border-radius: 1.5rem;
     overflow: hidden;
-    height: 23.5rem;
+    height: 24.5rem;
   }
   .pictures-container > div:last-child img {
     position: absolute;
@@ -399,19 +403,38 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
-.visited-places .pictures-container img:first-child {
+.visited-places .pictures-container > div:first-child {
   grid-column: span 3;
-  grid-row: span 2;
+}
+.visited-places .pictures-container > div:first-child img {
+  height: 100%;
+}
+.visited-places .pictures-container div:last-child div:first-child {
+  height: calc(60% - 1rem);
+}
+.visited-places .pictures-container div:last-child div:first-child img {
+  width: 120%;
+}
+.visited-places .pictures-container div:last-child div:last-child {
+  height: 40%;
 }
 
 @media screen and (max-width: 600px) {
   .visited-places .pictures-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     row-gap: 2rem;
   }
-  .visited-places .pictures-container img:first-child {
-    grid-column: span 2;
-    grid-row: span 2;
+  .visited-places .pictures-container > div:first-child {
+    grid-column: span 1;
+  }
+  .visited-places .pictures-container div:last-child {
+    display: flex;
+    gap: 1rem;
+    height: 9rem;
+  }
+  .visited-places .pictures-container div:last-child div {
+    width: 50%;
+    height: 100% !important;
   }
 }
 
@@ -425,25 +448,25 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
 .next-trip .features .feature {
   color: var(--clr-primary);
 }
-.next-trip .pictures-container .right-side {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+.next-trip .pictures-container > div > div:first-child {
+  height: 40%;
+  display: flex;
   gap: 1rem;
 }
-.next-trip .pictures-container .right-side div {
-  overflow: hidden;
-  grid-column: span 2;
+.next-trip .pictures-container > div > div:first-child div {
   position: relative;
-  height: 16rem;
+}
+.next-trip .pictures-container > div > div:first-child div:last-child {
+  width: 40%;
+}
+.next-trip .pictures-container > div > div:first-child div:first-child {
+  position: relative;
+  width: calc(60% - 1rem);
   border-radius: 1.5rem;
+  overflow: hidden;
 }
-.next-trip .pictures-container .right-side > img {
-  height: 9rem;
-}
-.next-trip .pictures-container .right-side div img {
-  position: relative;
-  top: -5rem;
+.next-trip .pictures-container > div > div:last-child {
+  height: calc(60% - 1rem);
 }
 
 @media screen and (max-width: 600px) {
@@ -452,17 +475,18 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
     grid-template-rows: auto;
     row-gap: 2rem;
   }
-  .next-trip .pictures-container div:first-child {
-    height: 18.793125rem;
-    overflow: hidden;
+  .next-trip .pictures-container > div > div:last-child {
+    display: none;
+  }
+  .next-trip .pictures-container > div > div:first-child {
+    height: 7.8rem;
+  }
+  .next-trip .pictures-container > div > div:first-child div {
+    width: 50% !important;
     border-radius: 1.5rem;
   }
-  .next-trip .pictures-container div:first-child img {
-    position: relative;
-    top: -4rem;
-  }
-  .next-trip .right-side div {
-    display: none;
+  .next-trip .pictures-container > div > div:first-child div:last-child {
+    overflow: hidden;
   }
 }
 /* next trip section styling END */
@@ -487,7 +511,7 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
     grid-template-columns: 1fr;
   }
   .friends-collaboration .pictures-container div {
-    height: 25.5rem;
+    height: 19.5rem;
     overflow: hidden;
     position: relative;
     border-radius: 1.5rem;
@@ -503,7 +527,7 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
 .application .application__reviews {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 1rem;
+  column-gap: 5rem;
   row-gap: 3rem;
   background-color: #fef4e7;
   color: #1e1e1e;
@@ -523,6 +547,20 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
   display: flex;
   justify-content: center;
 }
+.application .application__review:first-child svg:nth-child(1) path,
+.application .application__review:first-child svg:nth-child(2) path,
+.application .application__review:first-child svg:nth-child(3) path,
+.application .application__review:nth-child(2) svg:not(:nth-child(5)) path,
+.application .application__review:nth-child(3) svg path,
+.application .application__review:nth-child(4) svg:nth-child(1) path,
+.application .application__review:nth-child(4) svg:nth-child(2) path,
+.application .application__review:nth-child(5) svg path,
+.application .application__review:nth-child(6) svg:nth-child(1) path,
+.application .application__review:nth-child(6) svg:nth-child(2) path,
+.application .application__review:nth-child(6) svg:nth-child(3) path {
+  fill: #f7930d;
+}
+
 .application .application__review__description {
   font-size: 12px;
   font-weight: 400;
@@ -583,7 +621,8 @@ header .navbar .navbar__dropdown-menu--small-screen:hover {
 @media screen and (max-width: 600px) {
   .application .application__reviews {
     grid-template-columns: 1fr 1fr;
-    column-gap: 5rem;
+    column-gap: 2rem;
+    row-gap: 1.5rem;
   }
   .application .application__download img {
     width: max-content;
